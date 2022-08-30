@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-    width: 100vw;
-}
-
 body {
     font-family: montserrat;
     scroll-behavior: smooth;
