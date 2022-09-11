@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <title>Denidevs</title>
 </head>
 <body class="bg-customDark">
@@ -145,7 +147,61 @@
                 Projects
             </h1>
         </div>
-        <div class="flex flex-col container mx-auto justify-between items-center p-5 md:p-0">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg mb-5 container mx-auto" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-customRed text-2xl mb-5">Photo Contest</h2>
+                    <p class="text-customLight mb-5">A photo contest website were users of the site can upload photos, comment and like other photos uploaded.</p>
+                    <a href="https://fuomeme.herokuapp.com" class="text-customRed hover:text-customLightRed">Visit</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg mb-5 container mx-auto" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-customRed text-2xl mb-5">Inventory Management</h2>
+                    <p class="text-customLight mb-5">A project coded with react.js which links buyers and sellers together. It helps the sellers manager their products and sales.</p>
+                    <a href="https://ventoryman.herokuapp.com" class="text-customRed hover:text-customLightRed">Visit</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg mb-5 container mx-auto" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="text-customRed text-2xl mb-5">Hikes</h2>
+                    <p class="text-customLight mb-5">A hiking portfolio which tells you about hiking experiences in the best countries for hiking. </p>
+                    <a href="https://eni-d.github.io/hikes/" class="text-customRed hover:text-customLightRed">Visit</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg mb-5 container mx-auto" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="text-customRed text-2xl mb-5">Audiomack Clone</h2>
+                    <p class="text-customLight mb-5">A website which tries to mimic audiomack. I built it with react js, it was my very first project ever built while learning web development.</p>
+                    <a href="https://mack-clone.herokuapp.com/" class="text-customRed hover:text-customLightRed">Visit</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg container mx-auto" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="text-customRed text-2xl mb-5">Textty</h2>
+                    <p class="text-customLight mb-5">A very very basic chat web app that was building with socket.io, a web socket package. It allows people to join a chat room and have a one time chat.</p>
+                    <a href="https://textty.herokuapp.com" class="text-customRed hover:text-customLightRed">Visit</a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+        </div>
+
+        <!-- <div class="flex flex-col container mx-auto justify-between items-center p-5 md:p-0">
             <div class="bg-cardDark drop-shadow text-center p-10 rounded-lg mb-5 md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
                 <h2 class="text-customRed text-2xl mb-5">Photo Contest</h2>
                 <p class="text-customLight mb-5">A photo contest website were users of the site can upload photos, comment and like other photos uploaded.</p>
@@ -166,7 +222,7 @@
                 <p class="text-customLight mb-5">A very very basic chat web app that was building with socket.io, a web socket package. It allows people to join a chat room and have a one time chat.</p>
                 <a href="https://textty.herokuapp.com" class="text-customRed hover:text-customLightRed">Visit</a>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Footer -->
@@ -192,6 +248,30 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
